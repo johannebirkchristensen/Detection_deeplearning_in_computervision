@@ -83,7 +83,7 @@ class PotholeDataset:
         image_path = self.image_paths[idx]
         annotation = self.annotations[idx]
         
-        image = Image.open(image_path)
+        image = Image.open(image_path).convert('RGB')
         image = np.array(image)
         
         return image, annotation
